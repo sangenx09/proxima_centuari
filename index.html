@@ -23,8 +23,9 @@ function getLocation() {
 }
 
 function success(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+  xhttp.open("GET", "store.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude);
+  xhttp.send();
+
 }
 
 function error() {
