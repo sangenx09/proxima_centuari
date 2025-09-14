@@ -23,14 +23,12 @@ function getLocation() {
 }
 
 function success(position) {
+  const xhttp = new XMLHttpRequest();
   xhttp.open("GET", "store.php?lat=" + position.coords.latitude + "&long=" + position.coords.longitude);
   xhttp.send();
 
 }
 
-function error() {
-  alert("Sorry, no position available.");
-}
 </script>
 
 </body>
